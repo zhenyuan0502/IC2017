@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AlertDialog.AppCompat.Light"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zhenyuan0502.myapplication.MapsActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/map_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4D000000"
+        android:gravity="center"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Arcteon"
+
+            android:layout_marginBottom="40dp"
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
+
+        <Button
+            style="@style/AlertDialog.AppCompat.Light"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="What's near me?" />
+
+        <Button
+            style="@style/AlertDialog.AppCompat.Light"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:layout_marginBottom="20dp"
+            android:text="What's this?" />
+
+        <Button
+            android:id="@+id/btnTurnOn"
+            style="@style/AlertDialog.AppCompat.Light"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="Turn on map" />
+
+        <Button
+            style="@style/AlertDialog.AppCompat.Light"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:layout_marginBottom="20dp"
+            android:text="About" />
+    </LinearLayout>
+</RelativeLayout>
+
