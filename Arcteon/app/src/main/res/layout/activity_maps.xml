@@ -18,41 +18,41 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#4D000000"
-        android:gravity="center"
         android:clickable="true"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Arcteon"
-
             android:layout_marginBottom="40dp"
+
+            android:text="Arcteon"
             android:textColor="@android:color/white"
             android:textSize="40sp" />
 
         <Button
             style="@style/AlertDialog.AppCompat.Light"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
-            android:text="What's near me?" />
+            android:text="What things near me?" />
 
         <Button
+            android:id="@+id/btnAugmented"
             style="@style/AlertDialog.AppCompat.Light"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-
             android:layout_marginBottom="20dp"
             android:text="What's this?" />
 
         <Button
             android:id="@+id/btnTurnOn"
             style="@style/AlertDialog.AppCompat.Light"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
@@ -60,10 +60,9 @@
 
         <Button
             style="@style/AlertDialog.AppCompat.Light"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-
             android:layout_marginBottom="20dp"
             android:text="About" />
     </LinearLayout>

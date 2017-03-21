@@ -2,6 +2,7 @@ package com.example.zhenyuan0502.myapplication;
 
 import android.Manifest;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
@@ -57,14 +58,23 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         menu = (LinearLayout) findViewById(R.id.map_overlay);
 
-
         Button btnTurnOn = (Button) findViewById(R.id.btnTurnOn);
+        Button btnAugmented = (Button) findViewById(R.id.btnAugmented);
+
         btnTurnOn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 menu.setVisibility(View.INVISIBLE);
                 flag = 1;
-                Toast.makeText(getApplicationContext(),"Press Back to come back", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Press Back to come back", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnAugmented.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),AugmentedActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -226,10 +236,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     @Override
     public void onBackPressed() {
-        if(flag == 1){
+        if (flag == 1) {
             menu.setVisibility(View.VISIBLE);
             flag = 0;
-        }else{
+        } else {
             new AlertDialog.Builder(this)
                     .setMessage("Do you want to exit?")
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
